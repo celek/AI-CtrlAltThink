@@ -1,0 +1,48 @@
+This blog is only written by the Human person (you will notice the grammar mistake :)
+
+For the past 2 weeks I am researching the conceot of novelty and creativity by a GaneAI.
+I am starting to write the blog and will it shre it soon.
+
+During my research, I did test some LLM, and asked them to generate brand new ideas.
+The following is an example of the prompt I sent one LLM. In the prompt.
+I am forcing the LLM to generate a new game and validate it did not akready exist.
+
+Create python code for a game between a computer and a human. 
+The human will start the game from their laptop, a macos. 
+The human will then play against the computer. 
+One of them, computer or human, will win. 
+The game must be played on a terminal , only using the console. 
+There should be little to none luck. 
+There should be no advantage for either the human or the computer. 
+the game MUST be new, meaning it does not already exist. 
+You can get inspired by existing game but you must NOT reuse an existing game. 
+Once you think you have a game in mind, you must validate the game does not already exist. 
+Then you generate the code
+
+Once generated, I asked a different LLM to validate of the game is actually new and here is the response 
+
+"
+Conclusion: Is "Number Territory" a New Game?
+No direct match was found in the literature or game references for a game that combines:
+
+A grid-based territory control system,
+Expansion based on both factors and multiples,
+Adjacency as a requirement for moves after the first turn,
+Automatic claiming of all qualifying adjacent numbers.
+
+The closest existing games (Factor Game, Factor Captor) are educational math games focusing on factors only, with no spatial/territorial element.
+Classic territory games (Go, Othello, Risk) use adjacency and territory, but not mathematical relationships between numbers.
+
+Therefore, "Number Territory" appears to be an original game concept that combines elements from both mathematical and territory-control genres in a novel way. No existing game matches its core mechanics as described
+"
+
+Here you go - GenAI seems to be able to innovate...
+Innovation: meaning the application of a creation (novelty and originality) that delivers value. 
+Although the concept of value is a philosophical discussion we should have face toface around a table
+
+In the next blog, we will talk about creation, novelty, innovation and value.
+We will look at them from a social, biological and philosophical point of view. 
+I also want to present the research in GENAI about 'creation' and how we can learn from Human creative processes
+I'll finally try to look intothe future, can GenAI help us understand "things we do not know we do not know" ?
+
+REF: I published the prompt and code in the GIT server: 
