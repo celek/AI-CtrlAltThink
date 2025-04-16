@@ -1,11 +1,11 @@
 This blog is only written by the Human person (you will notice the grammar mistake :)
 
-For the past 2 weeks I am researching the conceot of novelty and creativity by a GaneAI.
-I am starting to write the blog and will it shre it soon.
+For the past 2 weeks I am researching the concept of novelty and creativity by a GenAI.
+I am starting to write the blog and will it share it soon.
 
 During my research, I did test some LLM, and asked them to generate brand new ideas.
-The following is an example of the prompt I sent one LLM. In the prompt.
-I am forcing the LLM to generate a new game and validate it did not akready exist.
+The following is an example of the prompt I sent one LLM. 
+In the prompt I am forcing the LLM to generate a new game and validate it did not already exist.
 
 Create python code for a game between a computer and a human. 
 The human will start the game from their laptop, a macos. 
@@ -45,4 +45,12 @@ We will look at them from a social, biological and philosophical point of view.
 I also want to present the research in GENAI about 'creation' and how we can learn from Human creative processes
 I'll finally try to look intothe future, can GenAI help us understand "things we do not know we do not know" ?
 
-REF: I published the prompt and code in the GIT server: 
+REF: I published the prompt and code in the GIT server: https://github.com/celek/AI-CtrlAltThink/tree/main/Creative%20Game
+
+PS: here isthe feedback from my Friend AI, reviewing the blog - I lile the lst sentence, I feel I am being told ! 
+I also love the GameAI :)
+"
+The introduction contains several grammar and spelling mistakes 
+(e.g., "conceot" instead of "concept," "GaneAI" instead of "GameAI," "shre" instead of "share," "akready" instead of "already"). 
+While you joke about grammar mistakes, consider correcting the most distracting ones for clarity.
+"
