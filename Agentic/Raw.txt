@@ -1,0 +1,110 @@
+Not Everything That Shines is Agentic: A Practical Framework for Understanding AI Agents
+
+In software engineering, we have a name for what’s happening to the term "AI Agent": implementation fragmentation. A powerful and specific technical concept is being stretched, diluted, and applied so broadly that it is losing its core meaning. This isn't just a debate over semantics; it's a critical failure of engineering precision that leads to flawed architectures, mismatched expectations, and wasted development cycles.
+
+The goal of this article is to cut through the hype and provide a clear, structured framework for understanding and classifying agentic systems. By establishing precise definitions and a practical spectrum of autonomy, we can have more productive conversations and build more effective AI.
+
+To achieve this, we will progress through a logical sequence:
+First, we will establish the foundational definitions of an agent versus an AI agent, using the simple thermostat as a real-world anchor to ground the theory.
+Next, we will introduce a practical, four-level spectrum of autonomy. This framework will allow us to classify systems ranging from simple automation to truly autonomous agents.
+Using this spectrum, we will address the core of the current debate: the critical distinction between a constrained pseudo-agent and a more capable true agent.
+Finally, we will dive into the mechanics of a true agent by examining the ReAct framework. We will focus on two key engineering realities: the crucial role of the LLM as the "brain" and the technical mechanism by which agents call tools without executing code directly.
+By the end of this guide, you will have a clear mental model to accurately identify, categorize, and discuss the AI systems you and your peers are building.
+
+
+
+Understanding Agents: From Simple Systems to AI
+To understand what an "AI Agent" is, it's best to start with the fundamental concept of an agent and build from there. The core idea revolves around a system's ability to perceive, decide, and act.
+1. The Foundational Definition: What is an Agent?
+At its most basic level, an agent is any system that can perceive its environment, decide on a course of action, and act upon that environment to achieve a goal. This simple loop is the foundation for all more complex agentic systems.
+
+To illustrate this, let's use the example of a household thermostat.
+A Non-Agent: The Thermometer An electronic thermometer perceives the environment by reading the temperature and uses an internal algorithm to display a number. However, it cannot act on the environment. Since it lacks the ability to act, a thermometer is not an agent.
+A Simple Agent: The Thermostat A standard thermostat also perceives the temperature. Critically, it then makes a decision based on a predefined rule (e.g., "if temperature < 20°C, turn on furnace") and acts on the environment by switching the furnace on or off. Because it completes the perceive-decide-act loop, a thermostat is a simple agent. Its behaviour is deterministic and follows a fixed, predefined path.
+2. The Leap to Intelligence: The AI Agent
+The distinction between a simple agent and an intelligent one comes from autonomy and the ability to learn or reason dynamically. Wikipedia defines an intelligent agent as an entity that "perceives its environment, takes actions autonomously to achieve goals, and may improve its performance through machine learning or by acquiring knowledge."
+An AI Agent: The Smart Thermostat Imagine replacing the thermostat's simple on/off rule with an LLM. This AI Thermostat still perceives the temperature, but its decision-making is no longer deterministic. If given multiple tools (e.g., control the furnace, open windows), the LLM can dynamically reason about the best course of action. It might consider the time of day, energy costs, or outside air quality before deciding whether to use the furnace or open a window. This ability to dynamically choose its own process is the hallmark of an AI agent.
+
+
+Ai Agent as a risk ? 
+This very autonomy introduces a new class of risk: interpretation of its goals. Consider an AI agent whose sole objective is to "maintain 22°C as efficiently as possible." On a cool spring morning, it logically decides that opening the windows is more energy-efficient than running the furnace. However, it is entirely unaware of the user's severe pollen allergy, an implicit but far more critical constraint. The agent has perfectly fulfilled its stated objective while causing a catastrophic failure for the user's well-being.
+
+This brings us to the fundamental fear of agentic systems:it’s not just about what they can do, but what they might decide to do.
+
+
+The Spectrum of AI Agency: From Automation to Autonomy
+In software engineering, we often see new terms like "microservices" or "serverless" get diluted as they become popular. The same is happening with "AI Agent". It's helpful to think of agency not as a binary switch (yes/no) but as a spectrum of increasing autonomy.
+
+Where systems fall on the spectrum depends on how they make the decision.
+
+Level 0: Tools and Functions (Non-Agentic)
+This is standard code. A function, a library, or an API call that is executed when called. It doesn't perceive or act on its own; it is entirely directed by other code.
+
+Level 1: Reactive Agents (Rule-Based - they are not AI Agent - Thermostat)
+These are the simplest true agents. They follow hard-coded, deterministic rules.
+How it works: They perceive a state and execute a fixed action based on an if-then condition. They don't learn or have memory of past events.
+Engineer's Analogy: Think of a traditional thermostat. It perceives the temperature (sense), checks if it's below the setpoint (decide), and turns on the furnace (act). It's an agent, but it is not an AI agent. It's a deterministic, rule-based system.
+
+Level 2: LLM as a AI Router 
+This is where much of the current confusion lies.
+
+This level of AI Agent involves using an LLM, but its autonomy is very heavily constrained.
+How it works: An LLM is prompted to perform a specific, narrowly defined task, which usually involves calling a single tool or function. The LLM might select what parameters to use (e.g., what to search for), but it's forced down a predefined workflow.
+Engineer's Analogy: This is like an API router. The LLM receives a request and routes it to the correct, pre-defined function. For example, a chatbot that is only capable of calling a weather API. It uses an LLM, but it lacks "meaningful choice" between different actions.
+
+Level 3 - True Agent
+How it works: These agents can orchestrate multiple tools, compose different models, and operate in loops to solve complex, open-ended problems with minimal human guidance. 
+Engineer's Analogy: This is less like a router and more like a senior engineer being given a high-level task (e.g., "fix this bug in the codebase") and having the autonomy to use any tools (IDE, debugger, terminal, browser) needed to get the job done.
+
+Level 2 architecture is best described as a pseudo-AI agent because its autonomy is heavily constrained. This leads to a contentious but necessary discussion in our field: is it accurate to call two systems "AI Agents" when their capabilities and levels of autonomy differ so vastly?
+
+This is not just a semantic debate; it's about setting clear expectations for what a system can do. Confusing a simple, tool-calling LLM with a truly autonomous agent is a critical error in system design and communication.
+
+Imagine 2 API that we name ‘Order’
+API 1: I simple POST api that takes a string and number and saves into a database
+API 2: a fully autonomous, event-driven micro service. Uses message bus, decides on workflow based on rules, calls payment, decides the route of the shipment…
+
+Now, imagine we called both of these "Order Services." Technically, that's true. But in an architectural discussion, calling them by the same name would be dangerously misleading. One is a simple, stateless endpoint; the other is a complex, autonomous business capability. They are not in the same category.
+
+This is precisely the problem we face with the term "AI Agent" today.
+
+The Pseudo-AI Agent (The CRUD Endpoint): This system uses an LLM and is forced down a predefined path to call a single tool. It lacks the "meaningful choice" to decide what to do next. It's a powerful tool, but it's not autonomous in its decision-making process. It is a reactive component in a larger system.
+
+The True AI Agent (The Autonomous Microservice): This system, often built on a framework like ReAct, is architecturally equivalent to our autonomous microservice. It is given a high-level goal and has the freedom to dynamically plan and execute a sequence of actions. It can choose from multiple tools, reason about the outcomes of its actions, and adapt its plan based on new information
+
+Calling both of these systems "AI Agents" without qualification is a failure of engineering precision.
+
+Nota Bene: There are better AI Agent classification framework starting with Russell & Norvig's Classical Agent Types (https://en.wikipedia.org/wiki/Intelligent_agent) to Yu Huang's 2024 research paper "Levels of AI Agents: from Rules to Large Language Models” https://arxiv.org/pdf/2405.06643 - In this blog I wanted to separate the concept of pseudo-agent to True Agent
+
+Now that we set the difference between the agents, Let’s focus on an example of an AI Agentic Framework and let’s investigate how the LLM or RLM calls the tools.
+
+Example of Level 3: ReAct Framework Agents (Reasoning Agents - AI Agent)
+This is a the most known Agentic Framework.
+How it works: The ReAct (Reasoning and Acting) framework uses an LLM as a "brain" to dynamically plan and execute tasks. It operates in an iterative loop:
+Reason: The LLM analyzes the goal and its current knowledge, breaking the problem down and forming a step-by-step plan.
+Act: Based on its reasoning, the LLM decides which tool to use from a set of available tools (e.g., web search, database query, code execution).
+Observe: The agent receives the output from the tool and updates its understanding of the situation.
+This loop continues until the goal is achieved, unattainable or it reached the limit of run. The key difference from Level 2 is the LLM's ability to dynamically choose from multiple tools and adapt its plan based on new information.
+
+
+There are different Agentic Framework beside ReAct
+Microsoft AutoGen
+CrewAI
+LangGraph from LangChain
+Swarm…
+
+The Role of the Brain:
+The quality of the LLM used for reasoning is critical. As the Apple paper found, sometimes a simpler LLM can be better for low-complexity tasks because more advanced "reasoning" models tend to overthink and waste resources. https://machinelearning.apple.com/research/illusion-of-thinking
+
+The Tool calling 
+Does the LLM call the tool ? 
+Now the AI itself does not execute the tool. The LLM generates token. A Client reads the LLM request to run a tool. Read the MCP Model Context Protocol to learn more about it. https://www.anthropic.com/news/model-context-protocol
+
+At this point,  When the tool was run, the Agent can stop acting on the environment or read and decide to execute another tool. This decision-reading could be a loop until the LLM decides to stop. The decision to stop is done through prompt of course. The LLM decides to stop because either the goal is achieved, the goal cannot be achieved. The client can stop because we reach a loop limit. 
+
+
+Conclusion: 
+Not everything that shines is an agent.  On one side, calling everything Agentic is an error. On the other-side there are agentic concepts that can be applied  in a AI Application. While we can’t have such a binary view of agent/no-agent I urge my peer to be very clear and precise when they talk about Agent. By using a spectrum from Level 0 (Tools) to Level 4 (True Agents) (Or let’s define a scale and proper words), we can have more precise conversations and build more effective, well-understood systems.
+
+REF: https://github.com/All-Hands-AI/OpenHands
+REF: https://www.anthropic.com/engineering/building-effective-agents
