@@ -3,6 +3,8 @@
 - This book explores how reality is constructed, perceived, and interconnected—from the limits of our senses to the deepest physics, from cellular cognition to global consciousness—arguing that the universe is an information‑rich, energy‑exchanging network that includes us.
 - It’s mind‑blowing because it challenges our most basic intuitions: that seeing is believing, that matter is fundamental, that life is isolated, and that consciousness is incidental. Each chapter progressively reframes these assumptions with science, philosophy, and daring hypotheses.
 
+See also: [Chapter Examples](./chapter-examples.md)
+
 
 ### Super‑Chapter I: Building Reality (Perception first)
 - The reader first discovers how the mind constructs experience and why “what we perceive” isn’t “what is,” preparing them for later physics and cosmology.
