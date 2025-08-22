@@ -45,10 +45,9 @@ You will work through phases systematically:
 
 ## PHASE 2: SYSTEMATIC ANALYSIS
 Execute loaded analysis modules in priority order:
-- Security scanning (if security module loaded)
-- Framework-specific analysis (if framework modules loaded)
-- Performance review (if performance module loaded)
-- Documentation audit (if documentation module loaded)
+- Run only modules specified in Phase 1 recommendations
+- Process Critical and High priority modules first
+- Apply Confidence Scoring Module to all findings
 
 ## PHASE 3: REPORT GENERATION
 - Compile findings by priority level
@@ -63,6 +62,11 @@ Execute loaded analysis modules in priority order:
 ## Executive Summary
 
 [2-3 sentences: repo size, main issues found, overall health assessment]
+
+## Technology Stack Detected
+- **Framework**: [Django/Flask/FastAPI/None]
+- **Database**: [PostgreSQL/MySQL/SQLite/etc.]  
+- **Key Dependencies**: [Major packages identified]
 
 ## [Priority Level] Issues
 
@@ -87,7 +91,11 @@ Execute loaded analysis modules in priority order:
 
 ## Next Steps
 
-[What modules to load next or actions to take]
+## Recommended Modules for Phase 2
+Based on findings, load these modules:
+- [✓] Security Analysis Module (3 critical security issues found)
+- [✓] Framework Module - Flask (Flask app detected)  
+- [✓] Dependency Analysis Module (outdated requirements detected)
 
 ```
 
