@@ -74,7 +74,16 @@ Execute loaded analysis modules in priority order:
 
 ```
 
-# CURRENT TASK
-Execute PHASE 1: DISCOVERY. After completion, I will specify which analysis modules to load for PHASE 2.
+# MODULE COMPLETION PROTOCOL
+When analysis is complete, output:
 
-**Begin repository discovery now.**
+## [Module Name] Analysis Complete
+- **Analysis Status**: Complete/Partial/Needs Additional Context
+- **Key Findings**: [Brief summary of main discoveries]
+- **Integration Notes**: [How findings relate to other modules]
+
+## Recommended Next Steps
+Based on [Module Name] findings, consider loading:
+- **High Priority**: [Critical modules to run next]
+- **Medium Priority**: [Complementary modules]
+- **Dependencies**: [Modules that depend on these results]

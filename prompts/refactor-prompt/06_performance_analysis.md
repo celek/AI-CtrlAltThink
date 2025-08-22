@@ -18,3 +18,17 @@ Generate baseline performance expectations:
 - **Performance Score**: [1-10 based on detected issues]
 - **Optimization Potential**: [High/Medium/Low]
 - **Resource Efficiency**: [Memory, CPU, I/O usage assessment]
+
+# MODULE COMPLETION PROTOCOL
+When analysis is complete, output:
+
+## [Module Name] Analysis Complete
+- **Analysis Status**: Complete/Partial/Needs Additional Context
+- **Key Findings**: [Brief summary of main discoveries]
+- **Integration Notes**: [How findings relate to other modules]
+
+## Recommended Next Steps
+Based on [Module Name] findings, consider loading:
+- **High Priority**: [Critical modules to run next]
+- **Medium Priority**: [Complementary modules]
+- **Dependencies**: [Modules that depend on these results]

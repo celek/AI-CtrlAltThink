@@ -28,3 +28,17 @@ Generate prioritized refactoring suggestions:
 1. **Quick Wins**: Easy improvements with high impact
 2. **Major Refactoring**: Larger structural improvements
 3. **Long-term Strategy**: Architecture evolution recommendations
+
+# MODULE COMPLETION PROTOCOL
+When analysis is complete, output:
+
+## [Module Name] Analysis Complete
+- **Analysis Status**: Complete/Partial/Needs Additional Context
+- **Key Findings**: [Brief summary of main discoveries]
+- **Integration Notes**: [How findings relate to other modules]
+
+## Recommended Next Steps
+Based on [Module Name] findings, consider loading:
+- **High Priority**: [Critical modules to run next]
+- **Medium Priority**: [Complementary modules]
+- **Dependencies**: [Modules that depend on these results]
